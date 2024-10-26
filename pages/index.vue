@@ -1,5 +1,10 @@
-<script setup></script>
+<script setup>
+definePageMeta(transition);
+</script>
 <template>
-  <NuxtLayout name="custom" title="welcome"></NuxtLayout>
+  <div :class="general.pageBg">
+    <NuxtLayout name="custom" page-name="index" title="Project Showroom">
+    </NuxtLayout>
+  </div>
 </template>
 <style lang="scss" scoped></style>

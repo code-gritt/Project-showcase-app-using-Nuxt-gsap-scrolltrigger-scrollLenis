@@ -4,8 +4,8 @@ const props = defineProps({
 });
 </script>
 <template>
-  <div class="default-title">
-    <div class="default-title__wrap">{{ props.text }}</div>
+  <div class="title-default h1">
+    <div class="title-default__wrap">{{ props.text }}</div>
   </div>
 </template>
 <style lang="scss" scoped>

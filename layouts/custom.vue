@@ -1,10 +1,21 @@
 <script setup>
 const props = defineProps({
   title: String,
+  pageName: String,
 });
+
+watch(
+  () => [general.isTransitionStart, general.isPreloaderVisible],
+  ([transitionStart, preloaderVisibility]) => {
+    if (transitionStart && !preloaderVisibility) {
+      firstScreenAnimation({ parent: `.${props.pageName}` });
+    }
+  }
+);
 </script>
 <template>
-  <div class="page">
+  <div :class="`page ${props.pageName}`">
+    <TheHeader />
     <div class="page-wrap _container">
       <TheTitle :text="props.title" />
       <slot />
