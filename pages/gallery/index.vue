@@ -15,11 +15,32 @@ watch(
     <NuxtLayout name="custom" page-name="gallery" title="gallery">
       <div class="page-content">
         <nuxt-link
-          v-for="(_, i) in 10"
+          v-for="(_, i) in 1"
           class="page-content__photo hover-image"
           :to="`/gallery/${i + 1}`"
         >
           <img src="/photo.jpeg" alt="" />
+        </nuxt-link>
+        <nuxt-link
+          v-for="(_, i) in 1"
+          class="page-content__photo hover-image"
+          :to="`/gallery/${i + 2}`"
+        >
+          <img src="/cat2.jpg" alt="" />
+        </nuxt-link>
+        <nuxt-link
+          v-for="(_, i) in 1"
+          class="page-content__photo hover-image"
+          :to="`/gallery/${i + 3}`"
+        >
+          <img src="/kg1.jpg" alt="" />
+        </nuxt-link>
+        <nuxt-link
+          v-for="(_, i) in 1"
+          class="page-content__photo hover-image"
+          :to="`/gallery/${i + 4}`"
+        >
+          <img src="/kg2.jpg" alt="" />
         </nuxt-link>
       </div>
     </NuxtLayout>
@@ -27,9 +48,9 @@ watch(
 </template>
 <style lang="scss" scoped>
 .page-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   align-items: flex-start;
 }
 </style>
